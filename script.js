@@ -4,9 +4,10 @@ const quoteContent = document.getElementById('quote-content');
 const actionIconsContainer = document.querySelector('.action-icons');
 const copyButton = document.getElementById('copy-btn');
 const tweetButton = document.getElementById('tweet-btn');
+const exportButton = document.getElementById('export-btn');
 const themeToggleButton = document.getElementById('theme-toggle-btn');
 
-// API URL
+////////// API URL
 const apiUrl = 'https://api.freeapi.app/api/v1/public/quotes/quote/random';
 
 ////////// Functions
@@ -33,9 +34,13 @@ async function displayQuote() {
     if (!quote) {
       quoteContent.innerHTML = `<p id="quote-text">Failed to load quote. Please try again!</p>`;
     } else {
-      quoteContent.innerHTML = `
-        <p id="quote-text"><span>“</span>${quote.content}<span>”</span></p>
-        <p id="quote-author">- ${quote.author || 'Anonymous'}</p>`;
+      quoteContent.innerHTML = `<p id="quote-text"><span>“</span>${
+        quote.content
+      }<span>”</span></p>
+         <p id="quote-author">- ${quote.author || 'Anonymous'}</p>`;
+      quoteContent.style.backgroundImage = `url('https://picsum.photos/600/400?${Date.now()})`; // Date.now() is a common technique to prevent browser caching
+      quoteContent.style.backgroundSize = 'cover';
+      quoteContent.style.backgroundPosition = 'center';
       actionIconsContainer.style.display = 'flex';
     }
   } catch (error) {
@@ -78,6 +83,25 @@ function shareOnTwitter() {
   window.open(twitterUrl, '_blank');
 }
 
+// Function to download quote using canvas(https://html2canvas.hertzen.com/getting-started)
+function exportQuoteAsImage() {
+  html2canvas(quoteContent)
+    .then(function (canvas) {
+      // create a temp achor elem
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL();
+      link.download = 'quote.png';
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
+    .catch(error => {
+      console.error('Error in exporting quote:', error);
+      alert('Failed to export quote. Please try again.');
+    });
+}
+
 // Change theme between dark and light mode
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
@@ -88,11 +112,13 @@ function toggleDarkMode() {
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 }
 
-////////// Event listuners
+////////// Event listeners
+document.addEventListener('DOMContentLoaded', displayQuote);
 newQuoteButton.addEventListener('click', displayQuote);
 copyButton.addEventListener('click', copyQuoteToClipboard);
 tweetButton.addEventListener('click', shareOnTwitter);
 themeToggleButton.addEventListener('click', toggleDarkMode);
+exportButton.addEventListener('click', exportQuoteAsImage);
 
 // Check for browser theme preference
 const isBrowserDarkMode =
