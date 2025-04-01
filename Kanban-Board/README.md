@@ -1,6 +1,12 @@
-# 📋 Kanban Board Project
+# 📋 Kanban Board
 
 A simple and interactive Kanban Board built with JavaScript to manage tasks efficiently.
+
+---
+
+## 🌐 Live Demo
+
+Try it here: [Kanban Board Live Demo](https://67ec42e2bb9c6d7a53adf72a--shimmering-blancmange-f86cd0.netlify.app/kanban-board/)
 
 ---
 
@@ -33,7 +39,6 @@ A simple and interactive Kanban Board built with JavaScript to manage tasks effi
 
 - Built with Vanilla JavaScript (no frameworks)
 - Styled with responsive CSS
-- Utilizes LocalStorage 
+- Utilizes LocalStorage
 
 ---
-

@@ -4,6 +4,12 @@ A real-time Markdown editor with live preview.
 
 ---
 
+## 🌐 Live Demo  
+
+Try it out here: [Markdown Previewer Live Demo](https://67ec42e2bb9c6d7a53adf72a--shimmering-blancmange-f86cd0.netlify.app/markdown-previewer/)  
+
+---
+
 ## 📸 Preview  
 
 <div align="center">
@@ -14,17 +20,20 @@ A real-time Markdown editor with live preview.
 
 ## 🚀 Features  
 
-- **Live Preview** – Instantly renders Markdown as you type.  
-- **Auto-Save** – Content is automatically saved in your browser (LocalStorage).  
-- **Easy Reset** – Clear the editor with a single click.  
-- **Responsive Design** – Works seamlessly on both desktop and mobile.  
+- **Live Preview** – Instantly renders Markdown as you type  
+- **Syntax Highlighting** – Clear formatting for code blocks and headers  
+- **Auto-Save** – Content persists in your browser (LocalStorage) between sessions  
+- **Easy Reset** – Clear the editor with a single click  
+- **Responsive Layout** – Adapts to desktop, tablet, and mobile screens  
+- **Dark/Light Mode** – Toggle between themes (optional - add if applicable)  
 
 ---
 
 ## ⚙️ Technical Details  
 
-- Built with **HTML, CSS, and JavaScript**.  
-- Uses **[Marked.js](https://marked.js.org/)** for Markdown parsing.  
-- Utilizes **LocalStorage** for saving content.  
+- **Zero Dependencies** – Pure HTML, CSS, and Vanilla JavaScript  
+- **Markdown Engine** – Powered by [Marked.js](https://marked.js.org/) for parsing  
+- **State Management** – Uses LocalStorage to save user content  
+- **Accessible** – Follows WAI-ARIA best practices (optional - add if true)  
 
 ---

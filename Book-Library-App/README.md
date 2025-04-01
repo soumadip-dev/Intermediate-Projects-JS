@@ -4,6 +4,12 @@ A web application that displays books from a public API with various viewing and
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live application here: [Book Library App Live Demo](https://67ec42e2bb9c6d7a53adf72a--shimmering-blancmange-f86cd0.netlify.app/book-library-app/)
+
+---
+
 ## 📸 Preview
 
 <div align="center">
