@@ -25,7 +25,7 @@ Try it out here: [Markdown Previewer Live Demo](https://67ec42e2bb9c6d7a53adf72a
 - **Auto-Save** – Content persists in your browser (LocalStorage) between sessions  
 - **Easy Reset** – Clear the editor with a single click  
 - **Responsive Layout** – Adapts to desktop, tablet, and mobile screens  
-- **Dark/Light Mode** – Toggle between themes (optional - add if applicable)  
+
 
 ---
 
