@@ -34,6 +34,5 @@ Try it out here: [Markdown Previewer Live Demo](https://67ec42e2bb9c6d7a53adf72a
 - **Zero Dependencies** – Pure HTML, CSS, and Vanilla JavaScript  
 - **Markdown Engine** – Powered by [Marked.js](https://marked.js.org/) for parsing  
 - **State Management** – Uses LocalStorage to save user content  
-- **Accessible** – Follows WAI-ARIA best practices (optional - add if true)  
 
 ---
